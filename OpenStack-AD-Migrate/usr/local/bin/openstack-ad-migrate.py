@@ -111,7 +111,7 @@ def putter(groups):
 		description = groups[g]["description"]
 
 		if project not in projectstring:
-			projectcreatecmd = "openstack project create --domain '{0}'' --description '{1}' '{2}'".format(domain,description, project)
+			projectcreatecmd = "openstack project create --domain '{0}' --description '{1}' '{2}'".format(domain,description, project)
 			cl(projectcreatecmd)
 
 		projectmembercmd = "openstack user list --project '{0}' -f json --noindent".format(project)
